@@ -1,0 +1,433 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  font-family: 'Akaya Kanadaka';
+  font-size: 20px;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-image: url('./../img/b7.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.scrollbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+main {
+  flex-grow: 1;
+  color: white;
+}
+
+.carousel {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer {
+  padding: 16px 0 16px;
+  background-image: url(/img/footerBG.png);
+  min-height: 450px;
+  background-position: top center;
+  background-size: contain;
+  background-repeat: repeat no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+
+.socials {
+  display: flex;
+  gap: 16px;
+}
+
+.socials-item.author {
+  margin-left: auto;
+}
+
+.socials-link {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: white;
+  text-decoration: none;
+}
+
+.copyright {
+  color: white;
+}
+
+/* CHARECTERS PAGE STYLE */
+.cardsTitle {
+  margin-top: 10px;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 8px;
+}
+.myCardWrapper {
+  display: flex;
+  justify-content: center;
+}
+.myCard {
+  background-color: rgba(170, 170, 73, 0.319);
+  border: 1px solid black;
+  width: 100%;
+}
+.myCardImg {
+  height: 300px;
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: top;
+}
+.myCardBody {
+  padding: 5px;
+}
+
+.myCardOption {
+  background-color: initial;
+  border: none;
+  padding-left: 2px;
+}
+.myCardOptionTitle {
+  font-weight: bold;
+}
+
+/* CART PAGE  STYLE*/
+/* .cartName {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+  color: black;
+}
+
+.cartImg {
+  background-image: url(./img/cart.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 100%;
+  min-height: 990px;
+}
+
+.card-bottom {
+  padding: 20px;
+} */
+
+/* Kreativny kod */
+.go-top {
+  display: none;
+  position: fixed;
+  bottom: 50px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: black;
+  opacity: 1;
+  z-index: 50;
+  pointer-events: all;
+  transition: all 0.3s ease-in-out;
+}
+
+.go-top.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.go-top svg {
+  width: 24px;
+  height: 24px;
+}
+/* SCROLLSPY CSS */
+.list-group#list-example {
+  position: sticky;
+  top: 15%;
+  /* border-image: url(/img/borderimg.jpg) round; */
+  padding: 4px;
+}
+
+.list-group-item {
+  background-color: transparent;
+  /* border-image: url(/img/borderimg.jpg) round; */
+  border: none;
+}
+
+.list-group-item:hover {
+  background: TRANSPARENT;
+}
+
+.list-group-item.active {
+  background-color: darkgrey;
+}
+
+.page-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+#form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.5rem;
+}
+
+.form-input > .label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.form-input > .input {
+  padding: 12px;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  box-shadow: 0 0 1px 1px darkgray;
+}
+
+.form-input > .textarea {
+  resize: none;
+}
+
+.form-input > .input:focus {
+  box-shadow: 0 0 1px 1px black;
+}
+
+.form-input.checkbox-input {
+  flex-direction: row;
+}
+
+.form-input > .checkbox {
+  display: none;
+}
+
+.form-input.checkbox-input > .label {
+  position: relative;
+  padding-left: 3.5rem;
+}
+
+.form-input.checkbox-input > .label::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.6rem;
+  width: 3rem;
+  border-radius: 1rem;
+  background-color: darkgray;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-input.checkbox-input > .label::after {
+  content: '';
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.2s ease-in-out;
+}
+
+.checkbox-input > .checkbox:checked + .label::after {
+  left: 1.6rem;
+}
+
+.checkbox-input > .checkbox:checked + .label::before {
+  background-color: darkgoldenrod;
+}
+
+#form-btn {
+  border: none;
+  outline: none;
+  padding: 10px 32px;
+  color: white;
+  background-color: rgb(33, 37, 41);
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out;
+}
+
+#form-btn:hover {
+  background-color: gray;
+}
+
+.contacts {
+  margin-bottom: 8px;
+}
+
+.contacts a {
+  color: black;
+  transition: color 0.2s ease-in-out;
+}
+
+.contacts a:hover {
+  color: var(--primary-black);
+}
+
+.form-input.error > .input {
+  box-shadow: 0 0 1px 1px #0e010e;
+}
+
+.form-input.success > .input {
+  box-shadow: 0 0 1px 1px #198754;
+}
+
+.form-error-feedback {
+  position: absolute;
+  bottom: -22px;
+  color: #0e010e;
+}
+
+.form-input > .form-error-feedback {
+  opacity: 0;
+}
+
+.form-input.error > .form-error-feedback {
+  opacity: 1;
+}
+
+#contact-form {
+  background: rgba(205, 214, 219, 0.3);
+  width: 40%;
+  border-radius: 10%;
+}
+
+.text-centr {
+  margin-top: 16px;
+}
+
+/* Accordion */
+
+.accordion-button {
+  background-color: bisque;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: darkgray;
+}
+
+.accordion-item {
+  background: transparent;
+}
+
+/* Quiz */
+
+.quiz-count {
+  font-size: 22px;
+}
+
+.answer-list {
+  font-size: 24px;
+}
+
+@media (max-width: 720px) {
+  #contact-form {
+    width: auto;
+    border-radius: 3%;
+  }
+
+  .form-input {
+    margin-bottom: 10px;
+  }
+
+  .form-input > .form-error-feedback {
+    font-size: 10px;
+    bottom: -16px;
+  }
+
+  .checkbox-input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .checkbox-input .label {
+    margin-bottom: 0;
+  }
+
+  #form-btn {
+    padding: 8px 16px;
+  }
+
+  .carousel {
+    max-width: unset;
+    margin: unset;
+  }
+
+  .socials {
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 8px;
+  }
+
+  .socials-item.author {
+    margin-left: unset;
+  }
+
+  .card-list {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .footer {
+    min-height: unset;
+  }
+
+  .go-top {
+    display: block;
+  }
+
+  .table-wrap {
+    overflow-x: scroll;
+  }
+
+  #question {
+    text-align: center;
+  }
+
+  .quiz-buttons {
+    display: flex;
+    justify-content: center;
+  }
+}
