@@ -10,17 +10,19 @@ $data = [
 ];
 $found = False;
 $user_name = "";
+$user_role = 0;
 if (isset($_POST['log_user'])) {
     foreach ($users as $user) {
         if ($data['user_password'] == $user->user_password) {
             $found = True;
             $user_name = $user->user_name;
+            $user_role = $user->user_role;
         }
     }
     if ($found == True) {
         $_SESSION['valid'] = true;
         $_SESSION['user_name'] = $user_name;
-        //print_r($_SESSION);
+        $_SESSION['user_role'] = $user_role;
         header("Location: ../../index.php");
     } else {
         header("Location: ../../wrong_password.php");

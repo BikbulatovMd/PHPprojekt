@@ -43,6 +43,9 @@ session_start();
               } else {
                 echo '<li class="nav-item" ><a class="nav-link" href="login.php">Login/Registration</a></li>';
               }
+              if (isset($_SESSION['user_name']) && ($_SESSION['user_role'] == 1)) {
+                echo '<li class="nav-item" ><a class="nav-link" href="admin.php">Admin</a></li>';
+              }
               ?>
             </ul>
           </div>

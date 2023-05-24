@@ -5,4 +5,5 @@
   require_once('charinfo.php');
   require_once('gameinfo.php');
   require_once('users.php');
+  require_once('getcontact.php');
   ?>
