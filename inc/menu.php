@@ -14,7 +14,6 @@ class Menu
 }
 $Header_menu = new Menu(array(
     "Home" => "index.php",
-    "Movies" => "movies.php",
     "Games" => "games.php",
     "Quiz" => "quiz.php",
     "Characters" => "characters.php",

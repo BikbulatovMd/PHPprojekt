@@ -6,7 +6,7 @@ include('partials/header.php');
   include('partials/game.php');
   ?>
 </main>
-<script src="/js/games.js"></script>
+<script src="js/games.js"></script>
 <?php
 include('partials/footer.php');
 ?>
