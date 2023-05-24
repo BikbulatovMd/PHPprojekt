@@ -18,6 +18,7 @@ $Header_menu = new Menu(array(
     "Quiz" => "quiz.php",
     "Characters" => "characters.php",
     "Contact" => "contact.php",
+    "Login/Registration" => "login.php"
 ));
 function print_menu($menu)
 {
