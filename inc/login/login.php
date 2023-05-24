@@ -13,7 +13,7 @@ $user_name = "";
 $user_role = 0;
 if (isset($_POST['log_user'])) {
     foreach ($users as $user) {
-        if ($data['user_password'] == $user->user_password) {
+        if ($data['user_password'] == $user->user_password and $data['user_email'] == $user->user_email) {
             $found = True;
             $user_name = $user->user_name;
             $user_role = $user->user_role;
