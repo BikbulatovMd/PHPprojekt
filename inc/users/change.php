@@ -15,10 +15,10 @@ echo '</tr>';
 echo '</thead>';
 echo '<tbody class="table-group-divider">';
 echo '<tr>';
-echo '<td colspan="5"><form class="add"  action="inc/users/insert.php" method="post"><input  type="text" name="user_email" required>';
-echo '<input type="text" name="user_name" required>';
-echo '<input type="text" name="user_password" required>';
-echo '<input type="text" name="user_role" required>';
+echo '<td colspan="5"><form class="add"  action="inc/users/insert.php" method="post"><input  type="text" name="email" required>';
+echo '<input type="text" name="name" required>';
+echo '<input type="text" name="password" required>';
+echo '<input type="text" name="role" required>';
 echo '
 <button type = "submit" name="add_user">Add</button>
 </form></td></td>';
@@ -40,11 +40,11 @@ foreach ($user as $c) {
   echo '</td>';
   echo '</tr>';
   echo '<td colspan="5"><form class="add"  action="inc/users/update.php" method="post">';
-  echo '<input  type="hidden" name="user_id" required value="' . $c->id . '">';
-  echo '<input  type="text" name="user_email" required value="' . $c->user_email . '">';
-  echo '<input type="text" name="user_name" required value="' . $c->user_name . '">';
-  echo '<input type="hidden" name="user_password" required value="' . $c->user_password . '">';
-  echo '<input type="text" name="user_role" required value="' . $c->user_role . '">';
+  echo '<input  type="hidden" name="id" required value="' . $c->id . '">';
+  echo '<input  type="text" name="email" required value="' . $c->user_email . '">';
+  echo '<input type="text" name="name" required value="' . $c->user_name . '">';
+  echo '<input type="hidden" name="password" required value="' . $c->user_password . '">';
+  echo '<input type="text" name="role" required value="' . $c->user_role . '">';
   echo '<button type = "submit" name="update_user">Change</button></form></td></td>';
   echo '</tr>';
   echo '</div>';
