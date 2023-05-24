@@ -431,3 +431,8 @@ main {
     justify-content: center;
   }
 }
+
+.add {
+  display: flex;
+  gap: 12px;
+}

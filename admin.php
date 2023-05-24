@@ -13,25 +13,32 @@ include('partials/header.php');
     <section>
       <h2>Requests from the site</h2>
       <?php
-      include('inc/contact/select.php');
+      include('inc/contact/change.php');
       ?>
     </section>
     <section>
       <h2>Characters</h2>
-      <form action="inc/qna/insert.php" method="post">
-        <input type="text" name="question" placeholder="Názov otázky">
-        <input type="text" name="answer" placeholder="Názov odpovede">
-        <input type="submit" value="Pridať" name="add_qna">
-      </form>
+      <?php
+      include('inc/characters/change.php');
+      ?>
     </section>
     <section>
       <h2>Games</h2>
+      <?php
+      include('');
+      ?>
     </section>
     <section>
-      <h2>Idit story</h2>
+      <h2>Edit story</h2>
+      <?php
+      include('');
+      ?>
     </section>
     <section>
       <h2>Users</h2>
+      <?php
+      include('');
+      ?>
     </section>
 </main>
 

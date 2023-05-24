@@ -6,11 +6,11 @@ echo '<div class="table-wrap">';
 echo '<table class="table table-bordered table-light table-striped">';
 echo '<thead>';
 echo '<tr>';
-echo '  <th>Name</th>';
-echo ' <th>E-mail</th>';
-echo '  <th>Comment</th>';
-echo '  <th>Delete</th>';
-echo ' </tr>';
+echo '<th>Name</th>';
+echo '<th>E-mail</th>';
+echo '<th>Comment</th>';
+echo '<th>Delete</th>';
+echo '</tr>';
 echo '</thead>';
 foreach ($contact as $c) {
   echo '<tbody class="table-group-divider">';
