@@ -33,11 +33,14 @@ foreach ($character as $c) {
                             <form action="inc/characters/delete.php" method="post">
                                 <button type = "submit" name="delete_character" value="' . $c->id . '"' . '>Delete</button>
                             </form>';
-  echo '
-                            <form action="inc/characters/update.php" method="post">
-                                <button type = "submit" name="update_character" value="' . $c->id . '"' . '>Change</button>
-                            </form></td>';
+  echo '</td>';
   echo '</tr>';
+  echo '<td colspan="4"><form class="add"  action="inc/characters/update.php" method="post">';
+  echo '<input  type="hidden" name="char_id" required value="' . $c->id . '">';
+  echo '<input  type="text" name="update_img" required value="' . $c->img . '">';
+  echo '<input type="text" name="update_name" required value="' . $c->name . '">';
+  echo '<input type="text" name="update_info" required value="' . $c->info . '">';
+  echo '<button type = "submit" name="update_character">Change</button></form></td></td>';
   echo '</tr>';
   echo '</div>';
 }
