@@ -1,5 +1,6 @@
 <?php
 include('inc/config.php');
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="sk">
@@ -37,6 +38,11 @@ include('inc/config.php');
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <?php
               print_menu($Header_menu);
+              if (isset($_SESSION['user_name'])) {
+                echo '<li class="nav-item" ><a class="nav-link" href="inc/login/logout.php">' . $_SESSION['user_name'] . '</a></li>';
+              } else {
+                echo '<li class="nav-item" ><a class="nav-link" href="login.php">Login/Registration</a></li>';
+              }
               ?>
             </ul>
           </div>

@@ -4,4 +4,5 @@
   require_once('story.php');
   require_once('charinfo.php');
   require_once('gameinfo.php');
+  require_once('users.php');
   ?>
