@@ -1,3 +1,6 @@
+<?php
+include('inc/config.php');
+?>
 <!DOCTYPE html>
 <html lang="sk">
 
@@ -33,27 +36,9 @@
           </div>
           <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.php">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="movies.php">Movies</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="gallery.php">Gallery</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="games.php">Games</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="quiz.php">Quiz</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="characters.php">Character</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contacts.php">Contacts</a>
-              </li>
+              <?php
+              print_menu($Header_menu);
+              ?>
             </ul>
           </div>
         </div>
