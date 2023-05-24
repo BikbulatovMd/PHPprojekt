@@ -17,8 +17,8 @@ foreach ($contact as $c) {
   echo '<tr>';
   echo '<td>' . $c->contact_name;
   '</td>';
-  echo '<td>' . $c->contact_email;
-  '</td>';
+  echo '<td><a href="mailto:" target="_blank">' . $c->contact_email;
+  '</a></td>';
   echo '<td>' . $c->comment;
   '</td>';
   echo '<td>

@@ -25,19 +25,13 @@ include('partials/header.php');
     <section>
       <h2>Games</h2>
       <?php
-      include('');
-      ?>
-    </section>
-    <section>
-      <h2>Edit story</h2>
-      <?php
-      include('');
+      include('inc/games/change.php');
       ?>
     </section>
     <section>
       <h2>Users</h2>
       <?php
-      include('');
+      include('inc/users/change.php');
       ?>
     </section>
 </main>
