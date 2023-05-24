@@ -28,7 +28,7 @@ include('partials/header.php');
     </div>
   </div>
 </main>
-
+<script src="js/quiz.js"></script>
 <?php
 include('partials/footer.php');
 ?>
