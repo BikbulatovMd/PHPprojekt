@@ -1,8 +1,6 @@
 <?php
 include('partials/header.php');
-if ($_SESSION['user_role'] == 1) {
-  header("Location: admin.php");
-} else {
+if ($_SESSION['user_role'] != 1) {
   header("Location: login.php");
 }
 ?>
