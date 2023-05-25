@@ -26,7 +26,7 @@ if (isset($_POST['add_user'])) {
         $query = "INSERT INTO users (user_name, user_email, user_password) VALUES (:user_name, :user_email,:user_password)";
         $query_run = $db->conn->prepare($query);
         $query_run->execute($data);
-        header("Location: ../../thank_you.php");
+        header("Location: ../../login.php");
       } catch (PDOException $e) {
         echo $e->getMessage();
       }

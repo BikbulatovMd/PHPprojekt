@@ -12,7 +12,7 @@ if (isset($_POST['contact_us'])) {
     $query = "INSERT INTO contact (contact_name, contact_email,comment) VALUES (:contact_name, :contact_email,:comment)";
     $query_run = $db->conn->prepare($query);
     $query_run->execute($data);
-    header("Location: ../../index.php");
+    header("Location: ../../thank_you.php");
   } catch (PDOException $e) {
     print_r($e->getMessage());
   }
