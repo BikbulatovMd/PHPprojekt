@@ -12,6 +12,7 @@ if (isset($_POST['add_character'])) {
     $sql = "INSERT INTO characters (img, name, info) VALUES (:img, :name, :info)";
     $query_run = $db->conn->prepare($sql);
     $query_run->execute($data);
+    header("Location: ../../admin.php");
   } catch (PDOException $e) {
     print_r($e->getMessage());
   }
