@@ -1,15 +1,14 @@
 <?php
 require('../config.php');
 $db =  new Database();
-if (isset($_POST['add_game'])) {
+if (isset($_POST['add_chapter'])) {
   print_r("Success");
   $data = [
-    'name' => $_POST["game_name"],
-    'date' => $_POST["game_date"],
-    'story' => $_POST["story"]
+    'chapter_name' => $_POST["chapter_name"],
+    'description' => $_POST["description"],
   ];
   try {
-    $sql = "INSERT INTO games (game_name, game_date, story) VALUES (:name, :date, :story)";
+    $sql = "INSERT INTO story (chapter_name, description) VALUES (:chapter_name, :description)";
     $query_run = $db->conn->prepare($sql);
     $query_run->execute($data);
   } catch (PDOException $e) {

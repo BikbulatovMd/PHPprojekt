@@ -34,6 +34,12 @@ include('partials/header.php');
       include('inc/users/change.php');
       ?>
     </section>
+    <section>
+      <h2>Home page</h2>
+      <?php
+      include('inc/home/change.php');
+      ?>
+    </section>
 </main>
 
 <?php

@@ -16,6 +16,7 @@ if (isset($_POST['contact_us'])) {
   } catch (PDOException $e) {
     print_r($e->getMessage());
   }
+  header("Location: ../../admin.php");
 } else {
   print_r("F");
 }
